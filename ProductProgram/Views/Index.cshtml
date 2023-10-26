@@ -1,0 +1,25 @@
+﻿@model List<SeuProjeto.Models.Produto>
+
+<h2>Lista de Produtos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade em Estoque</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.produtoNome</td>
+                <td>@produto.produtoDescricao</td>
+                <td>@produto.produtoPreco</td>
+                <td>@produto.qtdEstoque</td>
+            </tr>
+        }
+    </tbody>
+</table>

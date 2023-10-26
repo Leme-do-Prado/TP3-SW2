@@ -1,0 +1,26 @@
+﻿@model SeuProjeto.Models.Produto
+
+<h2>Detalhes do Produto</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Nome:</dt>
+        <dd>@Model.produtoNome</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Descrição:</dt>
+        <dd>@Model.produtoDescricao</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Preço:</dt>
+        <dd>@Model.produtoPreco</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>Quantidade em Estoque:</dt>
+        <dd>@Model.qtdEstoque</dd>
+    </dl>
+</div>
+
+<p>
+    <a href="@Url.Action("Index")" class="btn btn-default">Voltar</a>
+</p>

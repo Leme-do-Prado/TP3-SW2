@@ -1,0 +1,30 @@
+﻿@model SeuProjeto.Models.Produto
+
+<h2>Cadastro de Produto</h2>
+
+@using (Html.BeginForm("Salvar", "Produtos", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.produtoNome)
+        @Html.TextBoxFor(model => model.produtoNome, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.produtoDescricao)
+        @Html.TextBoxFor(model => model.produtoDescricao, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.produtoPreco)
+        @Html.TextBoxFor(model => model.produtoPreco, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.qtdEstoque)
+        @Html.TextBoxFor(model => model.qtdEstoque, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salva</button>
+}
